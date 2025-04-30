@@ -1,0 +1,64 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Banking System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|f:\\banking system\\tictactoe\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|F:\\Banking System\\tictactoe\\newuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\newuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|F:\\Banking System\\tictactoe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewUser.cs [Design]",
+              "DocumentMoniker": "F:\\Banking System\\TicTacToe\\NewUser.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\NewUser.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\NewUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T19:59:01.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LogIn.cs [Design]",
+              "DocumentMoniker": "F:\\Banking System\\TicTacToe\\LogIn.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\LogIn.cs",
+              "ToolTip": "F:\\Banking System\\TicTacToe\\LogIn.cs [Design]",
+              "RelativeToolTip": "TicTacToe\\LogIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T15:20:05.89Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "F:\\Banking System\\TicTacToe\\Form1.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Form1.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T16:59:01.165Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

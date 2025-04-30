@@ -1,0 +1,288 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dell\\Desktop\\Banking System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|c:\\users\\dell\\desktop\\banking system\\tictactoe\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\mainmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\mainmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\newuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\newuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\login.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\login.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\mainmenu.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\mainmenu.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\model1.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\model1.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\model1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\model1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\model1.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\model1.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\model1.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\model1.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\newuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\newuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\newuser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\newuser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Desktop\\Banking System\\tictactoe\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainMenu.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\MainMenu.Designer.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\MainMenu.Designer.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\MainMenu.Designer.cs",
+              "RelativeToolTip": "TicTacToe\\MainMenu.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:41:28.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Model1.edmx",
+              "RelativeDocumentMoniker": "TicTacToe\\Model1.edmx",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "TicTacToe\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-11-19T19:03:55.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NewUser.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\NewUser.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\NewUser.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\NewUser.cs [Design]",
+              "RelativeToolTip": "TicTacToe\\NewUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:09:32.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LogIn.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\LogIn.Designer.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\LogIn.Designer.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\LogIn.Designer.cs",
+              "RelativeToolTip": "TicTacToe\\LogIn.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:09:32.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LogIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\LogIn.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\LogIn.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\LogIn.cs [Design]",
+              "RelativeToolTip": "TicTacToe\\LogIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:09:32.912Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainMenu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\MainMenu.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\MainMenu.cs [Design]",
+              "RelativeToolTip": "TicTacToe\\MainMenu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:09:32.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LogIn.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\LogIn.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\LogIn.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\LogIn.cs",
+              "RelativeToolTip": "TicTacToe\\LogIn.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAYwIsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:09:32.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LogIn.resx",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\LogIn.resx",
+              "RelativeDocumentMoniker": "TicTacToe\\LogIn.resx",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\LogIn.resx",
+              "RelativeToolTip": "TicTacToe\\LogIn.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-11-18T14:37:28.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainMenu.resx",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\MainMenu.resx",
+              "RelativeDocumentMoniker": "TicTacToe\\MainMenu.resx",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\MainMenu.resx",
+              "RelativeToolTip": "TicTacToe\\MainMenu.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-11-18T14:41:32.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Model1.Context.tt",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Model1.Context.tt",
+              "RelativeDocumentMoniker": "TicTacToe\\Model1.Context.tt",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Model1.Context.tt",
+              "RelativeToolTip": "TicTacToe\\Model1.Context.tt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-11-19T19:03:28.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Model1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Model1.Designer.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Model1.Designer.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Model1.Designer.cs",
+              "RelativeToolTip": "TicTacToe\\Model1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T19:14:31.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Model1.edmx.diagram",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Model1.edmx.diagram",
+              "RelativeDocumentMoniker": "TicTacToe\\Model1.edmx.diagram",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Model1.edmx.diagram",
+              "RelativeToolTip": "TicTacToe\\Model1.edmx.diagram",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-19T19:14:26.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Model1.tt",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Model1.tt",
+              "RelativeDocumentMoniker": "TicTacToe\\Model1.tt",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\Model1.tt",
+              "RelativeToolTip": "TicTacToe\\Model1.tt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-11-19T19:14:23.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\packages.config",
+              "RelativeDocumentMoniker": "TicTacToe\\packages.config",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\packages.config",
+              "RelativeToolTip": "TicTacToe\\packages.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-19T19:05:05.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NewUser.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\NewUser.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\NewUser.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\NewUser.cs",
+              "RelativeToolTip": "TicTacToe\\NewUser.cs",
+              "ViewState": "AQIAANQAAAAAAAAAAAAYwOMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:09:32.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "NewUser.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\NewUser.Designer.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\NewUser.Designer.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\NewUser.Designer.cs",
+              "RelativeToolTip": "TicTacToe\\NewUser.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T19:03:23.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\MainMenu.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\Banking System\\TicTacToe\\MainMenu.cs",
+              "RelativeToolTip": "TicTacToe\\MainMenu.cs",
+              "ViewState": "AQIAAJgAAAAAAAAAAAA5wLMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:09:32.91Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
