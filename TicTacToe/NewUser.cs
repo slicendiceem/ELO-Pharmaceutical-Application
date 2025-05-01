@@ -12,11 +12,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using ComponentFactory.Krypton.Toolkit;
+using System.Data.SQLite;
 namespace TicTacToe
 {
     public partial class NewUser : KryptonForm
     {
-        
+        private SQLiteConnection GetConnection()
+        {
+            string dbPath = Path.Combine(Application.StartupPath, "ELODB.sqlite");
+            return new SQLiteConnection($"Data Source={dbPath};Version=3;");
+        }
+
         public NewUser()
         {
             InitializeComponent();
