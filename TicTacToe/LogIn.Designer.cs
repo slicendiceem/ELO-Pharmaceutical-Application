@@ -58,10 +58,10 @@
             // 
             // userinput
             // 
-            this.userinput.Location = new System.Drawing.Point(413, 210);
-            this.userinput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userinput.Location = new System.Drawing.Point(310, 171);
+            this.userinput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.userinput.Name = "userinput";
-            this.userinput.Size = new System.Drawing.Size(361, 31);
+            this.userinput.Size = new System.Drawing.Size(271, 27);
             this.userinput.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
             this.userinput.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -73,11 +73,11 @@
             // 
             // passinput
             // 
-            this.passinput.Location = new System.Drawing.Point(413, 299);
-            this.passinput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passinput.Location = new System.Drawing.Point(310, 243);
+            this.passinput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passinput.Name = "passinput";
             this.passinput.PasswordChar = '*';
-            this.passinput.Size = new System.Drawing.Size(361, 31);
+            this.passinput.Size = new System.Drawing.Size(271, 27);
             this.passinput.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
             this.passinput.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -90,30 +90,30 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(417, 178);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel1.Location = new System.Drawing.Point(313, 145);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(55, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(45, 20);
             this.kryptonLabel1.TabIndex = 14;
             this.kryptonLabel1.Values.Text = "E-Mail";
             this.kryptonLabel1.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel1_Paint_1);
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(413, 270);
-            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel2.Location = new System.Drawing.Point(310, 219);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(76, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(62, 20);
             this.kryptonLabel2.TabIndex = 15;
             this.kryptonLabel2.Values.Text = "Password";
             this.kryptonLabel2.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel2_Paint);
             // 
             // log_in
             // 
-            this.log_in.Location = new System.Drawing.Point(417, 368);
-            this.log_in.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.log_in.Location = new System.Drawing.Point(313, 299);
+            this.log_in.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.log_in.Name = "log_in";
-            this.log_in.Size = new System.Drawing.Size(133, 46);
+            this.log_in.Size = new System.Drawing.Size(100, 37);
             this.log_in.StateCommon.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.log_in.StateCommon.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
             this.log_in.StateCommon.Border.Color1 = System.Drawing.Color.DeepSkyBlue;
@@ -132,12 +132,12 @@
             // 
             // signup
             // 
-            this.signup.Location = new System.Drawing.Point(565, 658);
-            this.signup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.signup.Location = new System.Drawing.Point(424, 535);
+            this.signup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.signup.Name = "signup";
             this.signup.OverrideFocus.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.signup.OverrideNotVisited.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
-            this.signup.Size = new System.Drawing.Size(65, 23);
+            this.signup.Size = new System.Drawing.Size(53, 19);
             this.signup.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup.StateNormal.LongText.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.signup.StateNormal.LongText.Color2 = System.Drawing.Color.DeepSkyBlue;
@@ -147,19 +147,19 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(389, 657);
-            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel3.Location = new System.Drawing.Point(292, 534);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(171, 24);
+            this.kryptonLabel3.Size = new System.Drawing.Size(138, 20);
             this.kryptonLabel3.TabIndex = 18;
             this.kryptonLabel3.Values.Text = "Don\'t have an account?";
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(417, 50);
-            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel4.Location = new System.Drawing.Point(313, 41);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(226, 41);
+            this.kryptonLabel4.Size = new System.Drawing.Size(182, 33);
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Elephant", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel4.TabIndex = 20;
             this.kryptonLabel4.Values.Text = "Welcome back!";
@@ -169,20 +169,19 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::TicTacToe.Properties.Resources.IMG_1345;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(32, 115);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(24, 145);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(309, 277);
+            this.panel1.Size = new System.Drawing.Size(232, 225);
             this.panel1.TabIndex = 21;
             // 
             // LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImage = global::TicTacToe.Properties.Resources.login3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(837, 686);
+            this.ClientSize = new System.Drawing.Size(628, 557);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonLabel4);
             this.Controls.Add(this.kryptonLabel3);
@@ -194,7 +193,6 @@
             this.Controls.Add(this.passinput);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LogIn";
