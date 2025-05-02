@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\dell\\Documents\\GitHub\\ELO-Pharmaceutical-Application\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|c:\\users\\dell\\documents\\github\\elo-pharmaceutical-application\\tictactoe\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Documents\\GitHub\\ELO-Pharmaceutical-Application\\tictactoe\\newuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\newuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|c:\\users\\dell\\documents\\github\\elo-pharmaceutical-application\\tictactoe\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|solutionrelative:tictactoe\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EAE50577-75C6-41AB-AD3E-0A8A0322472A}|TicTacToe\\BankApp.csproj|C:\\Users\\dell\\Documents\\GitHub\\ELO-Pharmaceutical-Application\\tictactoe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -22,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "NewUser.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dell\\Documents\\GitHub\\ELO-Pharmaceutical-Application\\TicTacToe\\NewUser.cs",
               "RelativeDocumentMoniker": "TicTacToe\\NewUser.cs",
@@ -37,7 +37,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LogIn.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dell\\Documents\\GitHub\\ELO-Pharmaceutical-Application\\TicTacToe\\LogIn.cs",
               "RelativeDocumentMoniker": "TicTacToe\\LogIn.cs",

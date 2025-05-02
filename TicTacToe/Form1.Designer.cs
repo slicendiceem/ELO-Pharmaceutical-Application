@@ -145,8 +145,8 @@
             // 
             this.kryptonNavigator1.Button.ContextButton.AllowInheritImage = false;
             this.kryptonNavigator1.Button.ContextButton.UniqueName = "784D727367F74C036981E55839CB1D49";
-            this.kryptonNavigator1.Location = new System.Drawing.Point(-3, -2);
-            this.kryptonNavigator1.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonNavigator1.Location = new System.Drawing.Point(-4, -2);
+            this.kryptonNavigator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonNavigator1.Name = "kryptonNavigator1";
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.addmed,
@@ -155,7 +155,7 @@
             this.kryptonPage1});
             this.kryptonNavigator1.Palette = this.kryptonPalette1;
             this.kryptonNavigator1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonNavigator1.SelectedIndex = 1;
+            this.kryptonNavigator1.SelectedIndex = 0;
             this.kryptonNavigator1.Size = new System.Drawing.Size(1155, 718);
             this.kryptonNavigator1.StateCommon.Panel.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.kryptonNavigator1.StateCommon.Panel.Color2 = System.Drawing.Color.GreenYellow;
@@ -185,8 +185,8 @@
             this.addmed.Flags = 65534;
             this.addmed.ImageSmall = global::TicTacToe.Properties.Resources.Add_File;
             this.addmed.LastVisibleSet = true;
-            this.addmed.Margin = new System.Windows.Forms.Padding(2);
-            this.addmed.MinimumSize = new System.Drawing.Size(38, 41);
+            this.addmed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addmed.MinimumSize = new System.Drawing.Size(51, 50);
             this.addmed.Name = "addmed";
             this.addmed.Size = new System.Drawing.Size(1115, 716);
             this.addmed.StateCommon.Page.Image = global::TicTacToe.Properties.Resources.AddMedic;
@@ -202,9 +202,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(445, 534);
+            this.label2.Location = new System.Drawing.Point(593, 657);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 25);
+            this.label2.Size = new System.Drawing.Size(69, 31);
             this.label2.TabIndex = 58;
             this.label2.Text = "Expi.";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -214,25 +215,28 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(444, 499);
+            this.label1.Location = new System.Drawing.Point(592, 614);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 25);
+            this.label1.Size = new System.Drawing.Size(75, 31);
             this.label1.TabIndex = 57;
             this.label1.Text = "Prod.";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // med_photoadd
             // 
-            this.med_photoadd.Location = new System.Drawing.Point(569, 342);
+            this.med_photoadd.Location = new System.Drawing.Point(759, 421);
+            this.med_photoadd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.med_photoadd.Name = "med_photoadd";
-            this.med_photoadd.Size = new System.Drawing.Size(106, 35);
+            this.med_photoadd.Size = new System.Drawing.Size(141, 43);
             this.med_photoadd.TabIndex = 56;
             this.med_photoadd.Values.Text = "Add Image";
             this.med_photoadd.Click += new System.EventHandler(this.med_photoadd_Click);
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.Location = new System.Drawing.Point(449, 332);
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(599, 409);
+            this.kryptonGroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
             // kryptonGroupBox1.Panel
@@ -240,7 +244,7 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.restricted_n);
             this.kryptonGroupBox1.Panel.Controls.Add(this.restricted_y);
             this.kryptonGroupBox1.Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonGroupBox1_Panel_Paint);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(113, 51);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(151, 63);
             this.kryptonGroupBox1.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonGroupBox1.TabIndex = 55;
             this.kryptonGroupBox1.Values.Heading = "Restricted";
@@ -248,18 +252,20 @@
             // 
             // restricted_n
             // 
-            this.restricted_n.Location = new System.Drawing.Point(62, 3);
+            this.restricted_n.Location = new System.Drawing.Point(83, 4);
+            this.restricted_n.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.restricted_n.Name = "restricted_n";
-            this.restricted_n.Size = new System.Drawing.Size(39, 20);
+            this.restricted_n.Size = new System.Drawing.Size(44, 24);
             this.restricted_n.TabIndex = 1;
             this.restricted_n.Values.Text = "No";
             this.restricted_n.CheckedChanged += new System.EventHandler(this.restricted_n_CheckedChanged);
             // 
             // restricted_y
             // 
-            this.restricted_y.Location = new System.Drawing.Point(3, 3);
+            this.restricted_y.Location = new System.Drawing.Point(4, 4);
+            this.restricted_y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.restricted_y.Name = "restricted_y";
-            this.restricted_y.Size = new System.Drawing.Size(41, 20);
+            this.restricted_y.Size = new System.Drawing.Size(47, 24);
             this.restricted_y.TabIndex = 0;
             this.restricted_y.Values.Text = "Yes";
             this.restricted_y.CheckedChanged += new System.EventHandler(this.restricted_y_CheckedChanged);
@@ -268,9 +274,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::TicTacToe.Properties.Resources.Caduceus;
-            this.pictureBox1.Location = new System.Drawing.Point(513, 121);
+            this.pictureBox1.Location = new System.Drawing.Point(684, 149);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(133, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
@@ -296,9 +303,10 @@
             "Hormonal contraceptive",
             "Antiemetic",
             "Smoking cessation aid"});
-            this.AddPurpose.Location = new System.Drawing.Point(450, 298);
+            this.AddPurpose.Location = new System.Drawing.Point(600, 367);
+            this.AddPurpose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddPurpose.Name = "AddPurpose";
-            this.AddPurpose.Size = new System.Drawing.Size(226, 25);
+            this.AddPurpose.Size = new System.Drawing.Size(301, 29);
             this.AddPurpose.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -310,9 +318,10 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(3, 13);
+            this.kryptonLabel1.Location = new System.Drawing.Point(4, 16);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(223, 52);
+            this.kryptonLabel1.Size = new System.Drawing.Size(264, 52);
             this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.DimGray;
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Franklin Gothic Heavy", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 51;
@@ -322,10 +331,10 @@
             // 
             // kryptonTextBox1
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(449, 463);
-            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(599, 570);
+            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(226, 26);
+            this.kryptonTextBox1.Size = new System.Drawing.Size(301, 29);
             this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -340,10 +349,10 @@
             // 
             // AddNameMedicine
             // 
-            this.AddNameMedicine.Location = new System.Drawing.Point(450, 226);
-            this.AddNameMedicine.Margin = new System.Windows.Forms.Padding(2);
+            this.AddNameMedicine.Location = new System.Drawing.Point(600, 278);
+            this.AddNameMedicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddNameMedicine.Name = "AddNameMedicine";
-            this.AddNameMedicine.Size = new System.Drawing.Size(226, 26);
+            this.AddNameMedicine.Size = new System.Drawing.Size(301, 29);
             this.AddNameMedicine.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -358,10 +367,10 @@
             // 
             // AddManufacturer
             // 
-            this.AddManufacturer.Location = new System.Drawing.Point(450, 262);
-            this.AddManufacturer.Margin = new System.Windows.Forms.Padding(2);
+            this.AddManufacturer.Location = new System.Drawing.Point(600, 322);
+            this.AddManufacturer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddManufacturer.Name = "AddManufacturer";
-            this.AddManufacturer.Size = new System.Drawing.Size(226, 26);
+            this.AddManufacturer.Size = new System.Drawing.Size(301, 29);
             this.AddManufacturer.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -376,10 +385,10 @@
             // 
             // AddPrice
             // 
-            this.AddPrice.Location = new System.Drawing.Point(449, 391);
-            this.AddPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.AddPrice.Location = new System.Drawing.Point(599, 481);
+            this.AddPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddPrice.Name = "AddPrice";
-            this.AddPrice.Size = new System.Drawing.Size(226, 26);
+            this.AddPrice.Size = new System.Drawing.Size(301, 29);
             this.AddPrice.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -394,10 +403,10 @@
             // 
             // AddSalePrice
             // 
-            this.AddSalePrice.Location = new System.Drawing.Point(449, 427);
-            this.AddSalePrice.Margin = new System.Windows.Forms.Padding(2);
+            this.AddSalePrice.Location = new System.Drawing.Point(599, 526);
+            this.AddSalePrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddSalePrice.Name = "AddSalePrice";
-            this.AddSalePrice.Size = new System.Drawing.Size(226, 26);
+            this.AddSalePrice.Size = new System.Drawing.Size(301, 29);
             this.AddSalePrice.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -412,10 +421,10 @@
             // 
             // add_medicine
             // 
-            this.add_medicine.Location = new System.Drawing.Point(527, 569);
-            this.add_medicine.Margin = new System.Windows.Forms.Padding(2);
+            this.add_medicine.Location = new System.Drawing.Point(703, 700);
+            this.add_medicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.add_medicine.Name = "add_medicine";
-            this.add_medicine.Size = new System.Drawing.Size(70, 36);
+            this.add_medicine.Size = new System.Drawing.Size(93, 44);
             this.add_medicine.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.add_medicine.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.add_medicine.StateCommon.Border.Color1 = System.Drawing.Color.DeepSkyBlue;
@@ -436,10 +445,10 @@
             // exp_date
             // 
             this.exp_date.CalendarTodayDate = new System.DateTime(2024, 12, 10, 0, 0, 0, 0);
-            this.exp_date.Location = new System.Drawing.Point(504, 534);
-            this.exp_date.Margin = new System.Windows.Forms.Padding(2);
+            this.exp_date.Location = new System.Drawing.Point(672, 657);
+            this.exp_date.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exp_date.Name = "exp_date";
-            this.exp_date.Size = new System.Drawing.Size(171, 25);
+            this.exp_date.Size = new System.Drawing.Size(228, 29);
             this.exp_date.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -451,10 +460,10 @@
             // prod_date
             // 
             this.prod_date.CalendarTodayDate = new System.DateTime(2024, 12, 10, 0, 0, 0, 0);
-            this.prod_date.Location = new System.Drawing.Point(504, 499);
-            this.prod_date.Margin = new System.Windows.Forms.Padding(2);
+            this.prod_date.Location = new System.Drawing.Point(672, 614);
+            this.prod_date.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.prod_date.Name = "prod_date";
-            this.prod_date.Size = new System.Drawing.Size(171, 25);
+            this.prod_date.Size = new System.Drawing.Size(228, 29);
             this.prod_date.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -475,8 +484,8 @@
             this.menu.Flags = 65534;
             this.menu.ImageSmall = global::TicTacToe.Properties.Resources.Menu1;
             this.menu.LastVisibleSet = true;
-            this.menu.Margin = new System.Windows.Forms.Padding(2);
-            this.menu.MinimumSize = new System.Drawing.Size(38, 41);
+            this.menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.menu.MinimumSize = new System.Drawing.Size(51, 50);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(1115, 716);
             this.menu.StateCommon.Page.Image = global::TicTacToe.Properties.Resources.main;
@@ -489,9 +498,10 @@
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(609, 107);
+            this.kryptonLabel7.Location = new System.Drawing.Point(812, 132);
+            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(266, 52);
+            this.kryptonLabel7.Size = new System.Drawing.Size(319, 52);
             this.kryptonLabel7.StateCommon.ShortText.Color1 = System.Drawing.Color.DimGray;
             this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Franklin Gothic Heavy", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel7.TabIndex = 11;
@@ -504,9 +514,10 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(293, 162);
+            this.label5.Location = new System.Drawing.Point(391, 199);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(250, 18);
+            this.label5.Size = new System.Drawing.Size(321, 24);
             this.label5.TabIndex = 10;
             this.label5.Text = "Total Amount of Expired Drug Types:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -526,10 +537,12 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.kryptonDataGridView2.Location = new System.Drawing.Point(371, 183);
+            this.kryptonDataGridView2.Location = new System.Drawing.Point(495, 225);
+            this.kryptonDataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonDataGridView2.Name = "kryptonDataGridView2";
             this.kryptonDataGridView2.ReadOnly = true;
-            this.kryptonDataGridView2.Size = new System.Drawing.Size(742, 534);
+            this.kryptonDataGridView2.RowHeadersWidth = 51;
+            this.kryptonDataGridView2.Size = new System.Drawing.Size(989, 657);
             this.kryptonDataGridView2.StateCommon.Background.Color1 = System.Drawing.Color.Transparent;
             this.kryptonDataGridView2.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kryptonDataGridView2.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.DarkTurquoise;
@@ -540,65 +553,84 @@
             // Column1
             // 
             this.Column1.HeaderText = "Name";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Manufacturer";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Purpose";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Restricted";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Price";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Sale Price";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 125;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Stock Amount";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 125;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Prod";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Width = 125;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "Exp";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
+            this.Column9.Width = 125;
             // 
             // numreg
             // 
             this.numreg.AutoSize = true;
             this.numreg.BackColor = System.Drawing.Color.Transparent;
             this.numreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numreg.Location = new System.Drawing.Point(293, 107);
+            this.numreg.Location = new System.Drawing.Point(391, 132);
+            this.numreg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.numreg.Name = "numreg";
-            this.numreg.Size = new System.Drawing.Size(250, 18);
+            this.numreg.Size = new System.Drawing.Size(321, 24);
             this.numreg.TabIndex = 8;
             this.numreg.Text = "Total Amount of Expired Drug Types:";
             this.numreg.Click += new System.EventHandler(this.numreg_Click);
@@ -608,9 +640,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 162);
+            this.label4.Location = new System.Drawing.Point(20, 199);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(250, 18);
+            this.label4.Size = new System.Drawing.Size(321, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "Total Amount of Expired Drug Types:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -620,18 +653,20 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 107);
+            this.label3.Location = new System.Drawing.Point(20, 132);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(272, 18);
+            this.label3.Size = new System.Drawing.Size(346, 24);
             this.label3.TabIndex = 6;
             this.label3.Text = "Total Amount of Drug Types Registered:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(3, 13);
+            this.kryptonLabel2.Location = new System.Drawing.Point(4, 16);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(193, 52);
+            this.kryptonLabel2.Size = new System.Drawing.Size(227, 52);
             this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.DimGray;
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Franklin Gothic Heavy", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 0;
@@ -646,8 +681,8 @@
             this.kryptonPage2.Flags = 65534;
             this.kryptonPage2.ImageSmall = global::TicTacToe.Properties.Resources.Profile;
             this.kryptonPage2.LastVisibleSet = true;
-            this.kryptonPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.kryptonPage2.MinimumSize = new System.Drawing.Size(38, 41);
+            this.kryptonPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonPage2.MinimumSize = new System.Drawing.Size(51, 50);
             this.kryptonPage2.Name = "kryptonPage2";
             this.kryptonPage2.Size = new System.Drawing.Size(1115, 716);
             this.kryptonPage2.StateCommon.Page.Image = global::TicTacToe.Properties.Resources.main;
@@ -660,9 +695,10 @@
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(3, 13);
+            this.kryptonLabel4.Location = new System.Drawing.Point(4, 16);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(233, 52);
+            this.kryptonLabel4.Size = new System.Drawing.Size(277, 52);
             this.kryptonLabel4.StateCommon.ShortText.Color1 = System.Drawing.Color.DimGray;
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Franklin Gothic Heavy", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel4.TabIndex = 1;
@@ -680,7 +716,8 @@
             this.kryptonPage1.Flags = 65534;
             this.kryptonPage1.ImageSmall = global::TicTacToe.Properties.Resources.List;
             this.kryptonPage1.LastVisibleSet = true;
-            this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonPage1.MinimumSize = new System.Drawing.Size(67, 62);
             this.kryptonPage1.Name = "kryptonPage1";
             this.kryptonPage1.Size = new System.Drawing.Size(1115, 716);
             this.kryptonPage1.StateCommon.Page.Image = global::TicTacToe.Properties.Resources.main;
@@ -693,18 +730,20 @@
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(837, 45);
+            this.kryptonLabel6.Location = new System.Drawing.Point(1116, 55);
+            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(84, 20);
+            this.kryptonLabel6.Size = new System.Drawing.Size(103, 24);
             this.kryptonLabel6.TabIndex = 7;
             this.kryptonLabel6.Values.Text = "Last updated:";
             this.kryptonLabel6.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel6_Paint);
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(758, 45);
+            this.kryptonLabel5.Location = new System.Drawing.Point(1011, 55);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(84, 20);
+            this.kryptonLabel5.Size = new System.Drawing.Size(103, 24);
             this.kryptonLabel5.TabIndex = 6;
             this.kryptonLabel5.Values.Text = "Last updated:";
             this.kryptonLabel5.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel5_Paint);
@@ -726,10 +765,12 @@
             this.prodDataGridViewTextBoxColumn,
             this.expDataGridViewTextBoxColumn});
             this.kryptonDataGridView1.DataSource = this.drugBindingSource;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 71);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 87);
+            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.ReadOnly = true;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1112, 646);
+            this.kryptonDataGridView1.RowHeadersWidth = 51;
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1483, 795);
             this.kryptonDataGridView1.StateCommon.Background.Color1 = System.Drawing.Color.Transparent;
             this.kryptonDataGridView1.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kryptonDataGridView1.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.DarkTurquoise;
@@ -742,6 +783,7 @@
             this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -750,6 +792,7 @@
             this.manufacturerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "Manufacturer";
             this.manufacturerDataGridViewTextBoxColumn.HeaderText = "Manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
             this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -758,6 +801,7 @@
             this.purposeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.purposeDataGridViewTextBoxColumn.DataPropertyName = "Purpose";
             this.purposeDataGridViewTextBoxColumn.HeaderText = "Purpose";
+            this.purposeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.purposeDataGridViewTextBoxColumn.Name = "purposeDataGridViewTextBoxColumn";
             this.purposeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -766,6 +810,7 @@
             this.restrictedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.restrictedDataGridViewTextBoxColumn.DataPropertyName = "Restricted";
             this.restrictedDataGridViewTextBoxColumn.HeaderText = "Restricted";
+            this.restrictedDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.restrictedDataGridViewTextBoxColumn.Name = "restrictedDataGridViewTextBoxColumn";
             this.restrictedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -774,6 +819,7 @@
             this.priceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -782,6 +828,7 @@
             this.salePriceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.salePriceDataGridViewTextBoxColumn.DataPropertyName = "Sale Price";
             this.salePriceDataGridViewTextBoxColumn.HeaderText = "Sale Price";
+            this.salePriceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.salePriceDataGridViewTextBoxColumn.Name = "salePriceDataGridViewTextBoxColumn";
             this.salePriceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -790,6 +837,7 @@
             this.stockAmountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.stockAmountDataGridViewTextBoxColumn.DataPropertyName = "Stock Amount";
             this.stockAmountDataGridViewTextBoxColumn.HeaderText = "Stock Amount";
+            this.stockAmountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.stockAmountDataGridViewTextBoxColumn.Name = "stockAmountDataGridViewTextBoxColumn";
             this.stockAmountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -798,6 +846,7 @@
             this.prodDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.prodDataGridViewTextBoxColumn.DataPropertyName = "Prod";
             this.prodDataGridViewTextBoxColumn.HeaderText = "Prod";
+            this.prodDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.prodDataGridViewTextBoxColumn.Name = "prodDataGridViewTextBoxColumn";
             this.prodDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -806,6 +855,7 @@
             this.expDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.expDataGridViewTextBoxColumn.DataPropertyName = "Exp";
             this.expDataGridViewTextBoxColumn.HeaderText = "Exp";
+            this.expDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.expDataGridViewTextBoxColumn.Name = "expDataGridViewTextBoxColumn";
             this.expDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -822,9 +872,10 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(3, 13);
+            this.kryptonLabel3.Location = new System.Drawing.Point(4, 16);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(221, 52);
+            this.kryptonLabel3.Size = new System.Drawing.Size(262, 52);
             this.kryptonLabel3.StateCommon.ShortText.Color1 = System.Drawing.Color.DimGray;
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Franklin Gothic Heavy", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.TabIndex = 1;
@@ -849,12 +900,12 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 717);
+            this.ClientSize = new System.Drawing.Size(1533, 882);
             this.Controls.Add(this.kryptonNavigator1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
