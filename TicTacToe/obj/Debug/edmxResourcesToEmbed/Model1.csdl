@@ -15,6 +15,7 @@
   <EntityContainer Name="ELOEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="users" EntityType="Self.user" />
     <EntitySet Name="Drug" EntityType="ELOModel.Drug" />
+    <EntitySet Name="Exp_Drug" EntityType="ELOModel.Exp_Drug" />
   </EntityContainer>
   <EntityType Name="Drug">
     <Key>
@@ -29,6 +30,18 @@
     <Property Name="Sale_Price" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="Stock_Amount" Type="Int32" />
     <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Prod" Type="DateTime" Precision="0" />
+    <Property Name="Exp" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Exp_Drug">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Purpose" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Stock_Amount" Type="Int32" />
     <Property Name="Prod" Type="DateTime" Precision="0" />
     <Property Name="Exp" Type="DateTime" Precision="0" />
   </EntityType>

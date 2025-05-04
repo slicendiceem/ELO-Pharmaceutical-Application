@@ -16,6 +16,20 @@
     <Property Name="Prod" Type="date" />
     <Property Name="Exp" Type="date" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ELO.dbo.Exp_Drug' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Exp_Drug">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Manufacturer" Type="varchar" MaxLength="50" />
+    <Property Name="Purpose" Type="varchar" MaxLength="50" />
+    <Property Name="Stock Amount" Type="int" />
+    <Property Name="Prod" Type="date" />
+    <Property Name="Exp" Type="date" />
+  </EntityType>
   <EntityType Name="user">
     <Key>
       <PropertyRef Name="ID" />
@@ -31,5 +45,16 @@
   <EntityContainer Name="ELOModelStoreContainer">
     <EntitySet Name="Drug" EntityType="Self.Drug" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exp_Drug" EntityType="Self.Exp_Drug" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Exp_Drug].[ID] AS [ID], 
+    [Exp_Drug].[Name] AS [Name], 
+    [Exp_Drug].[Manufacturer] AS [Manufacturer], 
+    [Exp_Drug].[Purpose] AS [Purpose], 
+    [Exp_Drug].[Stock Amount] AS [Stock Amount], 
+    [Exp_Drug].[Prod] AS [Prod], 
+    [Exp_Drug].[Exp] AS [Exp]
+    FROM [dbo].[Exp_Drug] AS [Exp_Drug]</DefiningQuery>
+    </EntitySet>
   </EntityContainer>
 </Schema>

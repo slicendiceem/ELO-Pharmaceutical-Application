@@ -33,6 +33,7 @@
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.addmed = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.med_photoadd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -54,30 +55,30 @@
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.kryptonDataGridView2 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purposeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockAmountDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expDrugBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eLODataSetExp = new TicTacToe.ELODataSet();
             this.numreg = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.personalphoto = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblMobile = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.show_fullname = new System.Windows.Forms.Label();
+            this.LabelFullName = new System.Windows.Forms.Label();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -101,6 +102,7 @@
             this.drugTableAdapter = new TicTacToe.ELODataSetTableAdapters.DrugTableAdapter();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.exp_DrugTableAdapter = new TicTacToe.ELODataSetTableAdapters.Exp_DrugTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
             this.kryptonNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addmed)).BeginInit();
@@ -114,9 +116,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expDrugBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLODataSetExp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
             this.kryptonPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personalphoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
             this.kryptonPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
@@ -172,7 +176,7 @@
             this.logoutpage});
             this.kryptonNavigator1.Palette = this.kryptonPalette1;
             this.kryptonNavigator1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonNavigator1.SelectedIndex = 2;
+            this.kryptonNavigator1.SelectedIndex = 0;
             this.kryptonNavigator1.Size = new System.Drawing.Size(1155, 718);
             this.kryptonNavigator1.StateCommon.Panel.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.kryptonNavigator1.StateCommon.Panel.Color2 = System.Drawing.Color.GreenYellow;
@@ -184,6 +188,7 @@
             // addmed
             // 
             this.addmed.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.addmed.Controls.Add(this.kryptonTextBox2);
             this.addmed.Controls.Add(this.label2);
             this.addmed.Controls.Add(this.label1);
             this.addmed.Controls.Add(this.med_photoadd);
@@ -213,6 +218,23 @@
             this.addmed.ToolTipTitle = "Page ToolTip";
             this.addmed.UniqueName = "C66753E10398409A338D19C861A8CC1F";
             this.addmed.Click += new System.EventHandler(this.AddStockAmount_Click);
+            // 
+            // kryptonTextBox2
+            // 
+            this.kryptonTextBox2.Location = new System.Drawing.Point(450, 232);
+            this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonTextBox2.Name = "kryptonTextBox2";
+            this.kryptonTextBox2.Size = new System.Drawing.Size(226, 26);
+            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox2.StateCommon.Border.Rounding = 5;
+            this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBox2.TabIndex = 59;
+            this.kryptonTextBox2.Tag = "Name";
+            this.kryptonTextBox2.Text = "Name";
+            this.kryptonTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -249,7 +271,7 @@
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.Location = new System.Drawing.Point(449, 332);
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(449, 329);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
             // kryptonGroupBox1.Panel
@@ -359,8 +381,9 @@
             // 
             this.AddNameMedicine.Location = new System.Drawing.Point(450, 226);
             this.AddNameMedicine.Margin = new System.Windows.Forms.Padding(2);
+            this.AddNameMedicine.Multiline = true;
             this.AddNameMedicine.Name = "AddNameMedicine";
-            this.AddNameMedicine.Size = new System.Drawing.Size(226, 26);
+            this.AddNameMedicine.Size = new System.Drawing.Size(226, 0);
             this.AddNameMedicine.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -371,6 +394,7 @@
             this.AddNameMedicine.Tag = "Name";
             this.AddNameMedicine.Text = "Name";
             this.AddNameMedicine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AddNameMedicine.WordWrap = false;
             this.AddNameMedicine.TextChanged += new System.EventHandler(this.AddNameMedicine_TextChanged);
             // 
             // AddManufacturer
@@ -429,7 +453,7 @@
             // 
             // add_medicine
             // 
-            this.add_medicine.Location = new System.Drawing.Point(527, 569);
+            this.add_medicine.Location = new System.Drawing.Point(527, 568);
             this.add_medicine.Margin = new System.Windows.Forms.Padding(2);
             this.add_medicine.Name = "add_medicine";
             this.add_medicine.Size = new System.Drawing.Size(70, 36);
@@ -532,17 +556,17 @@
             // 
             this.kryptonDataGridView2.AllowUserToAddRows = false;
             this.kryptonDataGridView2.AllowUserToDeleteRows = false;
+            this.kryptonDataGridView2.AutoGenerateColumns = false;
             this.kryptonDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9});
+            this.iDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn1,
+            this.manufacturerDataGridViewTextBoxColumn1,
+            this.purposeDataGridViewTextBoxColumn1,
+            this.stockAmountDataGridViewTextBoxColumn1,
+            this.prodDataGridViewTextBoxColumn1,
+            this.expDataGridViewTextBoxColumn1});
+            this.kryptonDataGridView2.DataSource = this.expDrugBindingSource;
             this.kryptonDataGridView2.Location = new System.Drawing.Point(371, 183);
             this.kryptonDataGridView2.Name = "kryptonDataGridView2";
             this.kryptonDataGridView2.ReadOnly = true;
@@ -555,77 +579,64 @@
             this.kryptonDataGridView2.TabIndex = 9;
             this.kryptonDataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView2_CellContentClick);
             // 
-            // Column1
+            // iDDataGridViewTextBoxColumn
             // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Column2
+            // nameDataGridViewTextBoxColumn1
             // 
-            this.Column2.HeaderText = "Manufacturer";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // Column3
+            // manufacturerDataGridViewTextBoxColumn1
             // 
-            this.Column3.HeaderText = "Purpose";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
+            this.manufacturerDataGridViewTextBoxColumn1.DataPropertyName = "Manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn1.HeaderText = "Manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn1.Name = "manufacturerDataGridViewTextBoxColumn1";
+            this.manufacturerDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // Column4
+            // purposeDataGridViewTextBoxColumn1
             // 
-            this.Column4.HeaderText = "Restricted";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
+            this.purposeDataGridViewTextBoxColumn1.DataPropertyName = "Purpose";
+            this.purposeDataGridViewTextBoxColumn1.HeaderText = "Purpose";
+            this.purposeDataGridViewTextBoxColumn1.Name = "purposeDataGridViewTextBoxColumn1";
+            this.purposeDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // Column5
+            // stockAmountDataGridViewTextBoxColumn1
             // 
-            this.Column5.HeaderText = "Price";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
+            this.stockAmountDataGridViewTextBoxColumn1.DataPropertyName = "Stock Amount";
+            this.stockAmountDataGridViewTextBoxColumn1.HeaderText = "Stock Amount";
+            this.stockAmountDataGridViewTextBoxColumn1.Name = "stockAmountDataGridViewTextBoxColumn1";
+            this.stockAmountDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // Column6
+            // prodDataGridViewTextBoxColumn1
             // 
-            this.Column6.HeaderText = "Sale Price";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 125;
+            this.prodDataGridViewTextBoxColumn1.DataPropertyName = "Prod";
+            this.prodDataGridViewTextBoxColumn1.HeaderText = "Prod";
+            this.prodDataGridViewTextBoxColumn1.Name = "prodDataGridViewTextBoxColumn1";
+            this.prodDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // Column7
+            // expDataGridViewTextBoxColumn1
             // 
-            this.Column7.HeaderText = "Stock Amount";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 125;
+            this.expDataGridViewTextBoxColumn1.DataPropertyName = "Exp";
+            this.expDataGridViewTextBoxColumn1.HeaderText = "Exp";
+            this.expDataGridViewTextBoxColumn1.Name = "expDataGridViewTextBoxColumn1";
+            this.expDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // Column8
+            // expDrugBindingSource
             // 
-            this.Column8.HeaderText = "Prod";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 125;
+            this.expDrugBindingSource.DataMember = "Exp_Drug";
+            this.expDrugBindingSource.DataSource = this.eLODataSetExp;
             // 
-            // Column9
+            // eLODataSetExp
             // 
-            this.Column9.HeaderText = "Exp";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 125;
+            this.eLODataSetExp.DataSetName = "ELODataSetExp";
+            this.eLODataSetExp.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // numreg
             // 
@@ -678,16 +689,16 @@
             // kryptonPage2
             // 
             this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage2.Controls.Add(this.personalphoto);
-            this.kryptonPage2.Controls.Add(this.label13);
-            this.kryptonPage2.Controls.Add(this.label12);
-            this.kryptonPage2.Controls.Add(this.label11);
+            this.kryptonPage2.Controls.Add(this.pictureBoxProfile);
+            this.kryptonPage2.Controls.Add(this.lblID);
+            this.kryptonPage2.Controls.Add(this.lblEmail);
+            this.kryptonPage2.Controls.Add(this.lblMobile);
             this.kryptonPage2.Controls.Add(this.label10);
             this.kryptonPage2.Controls.Add(this.label9);
             this.kryptonPage2.Controls.Add(this.label8);
             this.kryptonPage2.Controls.Add(this.label6);
             this.kryptonPage2.Controls.Add(this.label7);
-            this.kryptonPage2.Controls.Add(this.show_fullname);
+            this.kryptonPage2.Controls.Add(this.LabelFullName);
             this.kryptonPage2.Controls.Add(this.kryptonLabel4);
             this.kryptonPage2.Flags = 65534;
             this.kryptonPage2.ImageSmall = global::TicTacToe.Properties.Resources.Profile;
@@ -696,7 +707,7 @@
             this.kryptonPage2.MinimumSize = new System.Drawing.Size(38, 41);
             this.kryptonPage2.Name = "kryptonPage2";
             this.kryptonPage2.Size = new System.Drawing.Size(1115, 716);
-            this.kryptonPage2.StateCommon.Page.Image = global::TicTacToe.Properties.Resources.main;
+            this.kryptonPage2.StateCommon.Page.Image = global::TicTacToe.Properties.Resources.IMG_1009_JPEG;
             this.kryptonPage2.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
             this.kryptonPage2.Text = "";
             this.kryptonPage2.TextTitle = "";
@@ -704,55 +715,55 @@
             this.kryptonPage2.UniqueName = "13BC7D945ED14878E3A57E706180431C";
             this.kryptonPage2.Click += new System.EventHandler(this.kryptonPage2_Click);
             // 
-            // personalphoto
+            // pictureBoxProfile
             // 
-            this.personalphoto.BackColor = System.Drawing.Color.White;
-            this.personalphoto.Location = new System.Drawing.Point(40, 298);
-            this.personalphoto.Name = "personalphoto";
-            this.personalphoto.Size = new System.Drawing.Size(156, 163);
-            this.personalphoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.personalphoto.TabIndex = 32;
-            this.personalphoto.TabStop = false;
+            this.pictureBoxProfile.BackColor = System.Drawing.Color.White;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(651, 253);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(156, 163);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxProfile.TabIndex = 32;
+            this.pictureBoxProfile.TabStop = false;
             // 
-            // label13
+            // lblID
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(170, 142);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 18);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Detail";
+            this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(431, 287);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(45, 18);
+            this.lblID.TabIndex = 15;
+            this.lblID.Text = "Detail";
             // 
-            // label12
+            // lblEmail
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(170, 174);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 18);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Detail";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(431, 319);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(45, 18);
+            this.lblEmail.TabIndex = 14;
+            this.lblEmail.Text = "Detail";
             // 
-            // label11
+            // lblMobile
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(170, 209);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 18);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Detail";
+            this.lblMobile.AutoSize = true;
+            this.lblMobile.BackColor = System.Drawing.Color.Transparent;
+            this.lblMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMobile.Location = new System.Drawing.Point(431, 354);
+            this.lblMobile.Name = "lblMobile";
+            this.lblMobile.Size = new System.Drawing.Size(45, 18);
+            this.lblMobile.TabIndex = 13;
+            this.lblMobile.Text = "Detail";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(64, 269);
+            this.label10.Location = new System.Drawing.Point(675, 224);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(111, 18);
             this.label10.TabIndex = 12;
@@ -763,7 +774,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 208);
+            this.label9.Location = new System.Drawing.Point(287, 353);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 20);
             this.label9.TabIndex = 11;
@@ -774,7 +785,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 173);
+            this.label8.Location = new System.Drawing.Point(287, 318);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 20);
             this.label8.TabIndex = 10;
@@ -785,7 +796,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 141);
+            this.label6.Location = new System.Drawing.Point(287, 286);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 20);
             this.label6.TabIndex = 9;
@@ -796,23 +807,23 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 104);
+            this.label7.Location = new System.Drawing.Point(258, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 18);
             this.label7.TabIndex = 8;
             this.label7.Text = "Hey,";
             // 
-            // show_fullname
+            // LabelFullName
             // 
-            this.show_fullname.AutoSize = true;
-            this.show_fullname.BackColor = System.Drawing.Color.Transparent;
-            this.show_fullname.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.show_fullname.Location = new System.Drawing.Point(47, 96);
-            this.show_fullname.Name = "show_fullname";
-            this.show_fullname.Size = new System.Drawing.Size(340, 31);
-            this.show_fullname.TabIndex = 7;
-            this.show_fullname.Text = "FULL NAME IS SHOWN HERE";
-            this.show_fullname.Click += new System.EventHandler(this.label6_Click);
+            this.LabelFullName.AutoSize = true;
+            this.LabelFullName.BackColor = System.Drawing.Color.Transparent;
+            this.LabelFullName.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelFullName.Location = new System.Drawing.Point(290, 152);
+            this.LabelFullName.Name = "LabelFullName";
+            this.LabelFullName.Size = new System.Drawing.Size(182, 31);
+            this.LabelFullName.TabIndex = 7;
+            this.LabelFullName.Text = "LabelFullName";
+            this.LabelFullName.Click += new System.EventHandler(this.label6_Click);
             // 
             // kryptonLabel4
             // 
@@ -1018,7 +1029,7 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(485, 309);
+            this.kryptonButton1.Location = new System.Drawing.Point(480, 293);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(153, 152);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -1039,7 +1050,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(438, 224);
+            this.label14.Location = new System.Drawing.Point(432, 208);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(249, 31);
             this.label14.TabIndex = 8;
@@ -1052,13 +1063,17 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 120000;
+            this.timer1.Interval = 20000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
             // 
             this.timer2.Interval = 15000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // exp_DrugTableAdapter
+            // 
+            this.exp_DrugTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -1099,10 +1114,12 @@
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expDrugBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLODataSetExp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
             this.kryptonPage2.ResumeLayout(false);
             this.kryptonPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personalphoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
             this.kryptonPage1.ResumeLayout(false);
             this.kryptonPage1.PerformLayout();
@@ -1155,15 +1172,26 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Timer timer2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private System.Windows.Forms.Label LabelFullName;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblMobile;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBoxProfile;
+        private ComponentFactory.Krypton.Navigator.KryptonPage logoutpage;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private System.Windows.Forms.Label label14;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private ELODataSet eLODataSetExp;
+        private System.Windows.Forms.BindingSource expDrugBindingSource;
+        private ELODataSetTableAdapters.Exp_DrugTableAdapter exp_DrugTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn purposeDataGridViewTextBoxColumn;
@@ -1173,21 +1201,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stockAmountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Timer timer2;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
-        private System.Windows.Forms.Label show_fullname;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox personalphoto;
-        private ComponentFactory.Krypton.Navigator.KryptonPage logoutpage;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn purposeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockAmountDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expDataGridViewTextBoxColumn1;
     }
 }

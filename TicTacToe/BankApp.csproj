@@ -90,6 +90,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ELODataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Exp_Drug.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

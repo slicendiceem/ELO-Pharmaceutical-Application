@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace TicTacToe
@@ -35,16 +37,23 @@ namespace TicTacToe
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'eLODataSetExp.Exp_Drug' table. You can move, or remove it, as needed.
+            this.exp_DrugTableAdapter.Fill(this.eLODataSetExp.Exp_Drug);
+
             // TODO: This line of code loads data into the 'eLODataSet.Drug' table. You can move, or remove it, as needed.
             this.drugTableAdapter.Fill(this.eLODataSet.Drug);
             DateTime localDate = DateTime.Now;
             kryptonLabel6.Text = localDate.ToString();
             numreg.Text = kryptonDataGridView1.Rows.Count.ToString();
             label5.Text = kryptonDataGridView2.Rows.Count.ToString();
+
+            //Load user data for profile display
+            LoadUserData();
             
 
-            
+
+
+
 
         }
 
@@ -92,7 +101,7 @@ namespace TicTacToe
             ELOEntities dbe = new ELOEntities();
             //----------------------------------
             Drug dru = new Drug();
-            dru.Name = AddNameMedicine.Text;
+            dru.Name = kryptonTextBox2.Text;
             dru.Manufacturer = AddManufacturer.Text;
             dru.Purpose = AddPurpose.Text;
             if (restricted_y.Checked)
@@ -121,98 +130,91 @@ namespace TicTacToe
             kryptonTextBox1.Text = kryptonTextBox1.Tag.ToString();
         }
 
+        private ELOEntities db = new ELOEntities();
+        private ELODataSet ds = new ELODataSet();
+        private ELODataSetTableAdapters.DrugTableAdapter drugTA = new ELODataSetTableAdapters.DrugTableAdapter();
+        private ELODataSetTableAdapters.Exp_DrugTableAdapter expDrugTA = new ELODataSetTableAdapters.Exp_DrugTableAdapter();
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //-------Database Declaration-------
-            ELOEntities dbe = new ELOEntities();
-            //----------------------------------
-            this.drugTableAdapter.Fill(this.eLODataSet.Drug);
-            DateTime localDate = DateTime.Now;
-            kryptonLabel6.Text = localDate.ToString();
-            numreg.Text = kryptonDataGridView1.Rows.Count.ToString();
-            label5.Text = kryptonDataGridView2.Rows.Count.ToString();
-            
-            if (kryptonDataGridView2.Columns.Count == 0)
+            try
             {
-                foreach (DataGridViewColumn column in kryptonDataGridView1.Columns)
+                // 1. Initialize fresh DataSet
+                var ds = new ELODataSet();
+
+                // 2. Load data
+                drugTA.Fill(ds.Drug);
+                expDrugTA.Fill(ds.Exp_Drug);
+
+                // 3. Find drugs to transfer (expiring within 91 days)
+                var expiryThreshold = DateTime.Today.AddDays(91);
+                var drugsToTransfer = ds.Drug
+                    .Where(d => !d.IsExpNull() && d.Exp <= expiryThreshold && !ds.Exp_Drug.Any(x => x.ID == d.ID))
+                    .ToList();
+
+                if (drugsToTransfer.Count > 0)
                 {
-                    kryptonDataGridView2.Columns.Add((DataGridViewColumn)column.Clone());
+                    // 4. Process each drug
+                    foreach (var drug in drugsToTransfer)
+                    {
+                        // Add to expired table
+                        var newExpDrug = ds.Exp_Drug.NewExp_DrugRow();
+                        newExpDrug.ID = drug.ID;
+                        newExpDrug.Name = drug.Name;
+                        newExpDrug.Manufacturer = drug.Manufacturer;
+                        newExpDrug.Purpose = drug.Purpose;
+                        newExpDrug.Stock_Amount = drug.Stock_Amount;
+                        newExpDrug.Prod = drug.Prod;
+                        newExpDrug.Exp = drug.Exp;
+                        ds.Exp_Drug.AddExp_DrugRow(newExpDrug);
+
+                        // Remove from active table
+                        drug.Delete();
+                    }
+
+                    // 5. Update database - FIRST delete from Drug, THEN add to Exp_Drug
+                    drugTA.Update(ds.Drug);       // Deletes removed rows
+                    expDrugTA.Update(ds.Exp_Drug); // Adds new rows
+
+                    // 6. Refresh data
+                    ds.Clear();
+                    drugTA.Fill(ds.Drug);
+                    expDrugTA.Fill(ds.Exp_Drug);
+
+                    // 7. Update UI
+                    kryptonDataGridView1.DataSource = ds.Drug;
+                    kryptonDataGridView2.DataSource = ds.Exp_Drug;
+
+                    KryptonMessageBox.Show($"Transferred {drugsToTransfer.Count} drugs to expired table.",
+                                         "Success",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information);
                 }
+                else
+                {
+                    KryptonMessageBox.Show("No expiring drugs found to transfer.",
+                                         "Info",
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information);
+                }
+
+                UpdateCounters();
             }
-            for (int i = kryptonDataGridView1.Rows.Count - 1; i >= 0; i--)
+            catch (Exception ex)
             {
-                try
-                {
-                    // Get the expiry date from the correct column (index 8 in this case)
-                    var cellValue = kryptonDataGridView1.Rows[i].Cells[8].Value;
-                    if (cellValue == null || cellValue == DBNull.Value)
-                    {
-                        continue; // Skip rows with no expiry date
-                    }
-
-                    // Parse the expiry date
-                    DateTime expiryDate = Convert.ToDateTime(cellValue.ToString());
-                    TimeSpan diffResult = expiryDate - DateTime.Now; // Days until expiry
-                    Console.WriteLine($"Row {i}: Days until expiry = {diffResult.TotalDays}");
-
-                    // Check if the expiry date is within the next 3 months (91 days)
-                    if (diffResult.TotalDays >= 0 && diffResult.TotalDays <= 91)
-                    {
-                        // Check for duplicate row in kryptonDataGridView2
-                        bool isDuplicate = false;
-                        foreach (DataGridViewRow row in kryptonDataGridView2.Rows)
-                        {
-                            bool rowsMatch = true;
-                            for (int j = 0; j < kryptonDataGridView1.Columns.Count; j++)
-                            {
-                                if (!row.Cells[j].Value?.ToString().Equals(kryptonDataGridView1.Rows[i].Cells[j].Value?.ToString()) ?? true)
-                                {
-                                    rowsMatch = false;
-                                    break;
-                                }
-                            }
-
-                            if (rowsMatch)
-                            {
-                                isDuplicate = true;
-                                break;
-                            }
-                        }
-
-                        // Skip adding if duplicate is found
-                        if (isDuplicate)
-                        {
-                            Console.WriteLine($"Duplicate found for row {i}, skipping addition.");
-                            continue;
-                        }
-
-                        // Add the row to the second DataGridView
-                        int newRowIndex = kryptonDataGridView2.Rows.Add();
-                        for (int j = 0; j < kryptonDataGridView1.Columns.Count; j++)
-                        {
-                            kryptonDataGridView2.Rows[newRowIndex].Cells[j].Value = kryptonDataGridView1.Rows[i].Cells[j].Value;
-                        }
-
-                        // Remove the row from the first DataGridView
-                        kryptonDataGridView1.Rows.RemoveAt(i);
-
-                        // Optional: Notify success for this row
-                        Console.WriteLine($"Row {i} successfully moved to kryptonDataGridView2.");
-                    }
-                    if (kryptonDataGridView2.Rows.Count > 0)
-                    {
-                        MessageBox.Show("There are Expired Drugs!", "Expired Drugs", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    // Log errors for debugging
-                    Console.WriteLine($"Error processing row {i}: {ex.Message}");
-                    MessageBox.Show($"Error processing row {i}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                KryptonMessageBox.Show($"Transfer failed: {ex.Message}\n\n{ex.InnerException?.Message}",
+                                     "Error",
+                                     MessageBoxButtons.OK,
+                                     MessageBoxIcon.Error);
+                Debug.WriteLine($"ERROR: {ex}");
             }
+        }
 
-            
+        private void UpdateCounters()
+        {
+            numreg.Text = ds.Drug.Count.ToString();
+            label5.Text = ds.Exp_Drug.Count.ToString();
+            kryptonLabel6.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -378,5 +380,48 @@ namespace TicTacToe
             frm.Show();
             this.Hide();
         }
+
+        private void LoadUserData()
+        {
+            try
+            {
+                using (ELOEntities bse = new ELOEntities())
+                {
+                    // Retrieve the user with the specified ID
+                    user userData = bse.users.FirstOrDefault(u => u.Email == loggedaccountnum);
+
+                    if (userData != null)
+                    {
+                        // Display data in labels
+                        LabelFullName.Text = $"{userData.First_Name} {userData.Second_Name}!";
+                        lblEmail.Text = userData.Email;
+                        lblMobile.Text = userData.Mobile.ToString();
+                        lblID.Text = userData.ID.ToString();
+                        // Display photo if available
+                        if (userData.Photo != null && userData.Photo.Length > 0)
+                        {
+                            using (MemoryStream ms = new MemoryStream(userData.Photo))
+                            {
+                                pictureBoxProfile.Image = Image.FromStream(ms);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("User not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        this.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading user data: {ex.Message}", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Example of how to call this form from another form (like after login):
+        // UserProfileForm profileForm = new UserProfileForm(loggedInUserId);
+        // profileForm.Show();
     }
-    }
+}

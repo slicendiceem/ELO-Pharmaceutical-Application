@@ -27,5 +27,6 @@ namespace TicTacToe
     
         public virtual DbSet<user> users { get; set; }
         public virtual DbSet<Drug> Drug { get; set; }
+        public virtual DbSet<Exp_Drug> Exp_Drug { get; set; }
     }
 }
