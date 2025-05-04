@@ -19,6 +19,7 @@ namespace TicTacToe
     {
         private SQLiteConnection GetConnection()
         {
+            //=========================New Database Path=========================
             string dbPath = Path.Combine(Application.StartupPath, "ELODB.sqlite");
             return new SQLiteConnection($"Data Source={dbPath};Version=3;");
         }
@@ -42,7 +43,9 @@ namespace TicTacToe
         private int load_Account()
         {
             int no;
+            //-------Database Declaration-------
             ELOEntities bse = new ELOEntities();
+            //----------------------------------
             var item = bse.users.ToArray();
             no = item.LastOrDefault().ID + 1;
             return no;
@@ -170,8 +173,9 @@ namespace TicTacToe
                         {
                             if (personalphoto.Image != null)
                             {
-
+                                //-------Database Declaration-------
                                 ELOEntities bse = new ELOEntities();
+                                //----------------------------------
                                 user acc = new user();
                                 acc.ID = load_Account();
                                 acc.First_Name = Convert.ToString(createfirstname.Text);

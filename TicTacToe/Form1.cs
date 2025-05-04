@@ -88,7 +88,9 @@ namespace TicTacToe
 
         private void add_medicine_Click(object sender, EventArgs e)
         {
+            //-------Database Declaration-------
             ELOEntities dbe = new ELOEntities();
+            //----------------------------------
             Drug dru = new Drug();
             dru.Name = AddNameMedicine.Text;
             dru.Manufacturer = AddManufacturer.Text;
@@ -121,7 +123,9 @@ namespace TicTacToe
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //-------Database Declaration-------
             ELOEntities dbe = new ELOEntities();
+            //----------------------------------
             this.drugTableAdapter.Fill(this.eLODataSet.Drug);
             DateTime localDate = DateTime.Now;
             kryptonLabel6.Text = localDate.ToString();

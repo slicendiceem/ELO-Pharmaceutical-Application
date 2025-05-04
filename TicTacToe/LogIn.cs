@@ -24,6 +24,8 @@ namespace TicTacToe
             get { return loggedaccountnum; }
         }
 
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             loggedaccountnum = "";
@@ -140,7 +142,9 @@ namespace TicTacToe
             string username, password;
             username = userinput.Text;
             password = passinput.Text;
+            //-------Database Declaration-------
             ELOEntities dbe = new ELOEntities();
+            //----------------------------------
             if (userinput.Text != string.Empty || passinput.Text != string.Empty)
             {
 

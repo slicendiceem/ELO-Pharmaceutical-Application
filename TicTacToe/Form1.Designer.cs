@@ -95,7 +95,7 @@
             this.drugBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eLODataSet = new TicTacToe.ELODataSet();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.logoutpage = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label14 = new System.Windows.Forms.Label();
             this.drugTableAdapter = new TicTacToe.ELODataSetTableAdapters.DrugTableAdapter();
@@ -122,8 +122,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLODataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).BeginInit();
-            this.kryptonPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoutpage)).BeginInit();
+            this.logoutpage.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -169,10 +169,10 @@
             this.menu,
             this.kryptonPage2,
             this.kryptonPage1,
-            this.kryptonPage3});
+            this.logoutpage});
             this.kryptonNavigator1.Palette = this.kryptonPalette1;
             this.kryptonNavigator1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.SelectedIndex = 4;
             this.kryptonNavigator1.Size = new System.Drawing.Size(1155, 718);
             this.kryptonNavigator1.StateCommon.Panel.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.kryptonNavigator1.StateCommon.Panel.Color2 = System.Drawing.Color.GreenYellow;
@@ -998,23 +998,23 @@
             this.kryptonLabel3.Values.Text = "Medicine List";
             this.kryptonLabel3.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel3_Paint);
             // 
-            // kryptonPage3
+            // logoutpage
             // 
-            this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage3.Controls.Add(this.kryptonButton1);
-            this.kryptonPage3.Controls.Add(this.label14);
-            this.kryptonPage3.Flags = 65534;
-            this.kryptonPage3.ImageSmall = global::TicTacToe.Properties.Resources.icons8_log_out_24;
-            this.kryptonPage3.LastVisibleSet = true;
-            this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
-            this.kryptonPage3.Name = "kryptonPage3";
-            this.kryptonPage3.Size = new System.Drawing.Size(1115, 716);
-            this.kryptonPage3.StateCommon.Page.Image = global::TicTacToe.Properties.Resources._2;
-            this.kryptonPage3.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
-            this.kryptonPage3.Text = "";
-            this.kryptonPage3.TextTitle = "";
-            this.kryptonPage3.ToolTipTitle = "Page ToolTip";
-            this.kryptonPage3.UniqueName = "9F8BD8D6146B4969AD9B17BFE06D2110";
+            this.logoutpage.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.logoutpage.Controls.Add(this.kryptonButton1);
+            this.logoutpage.Controls.Add(this.label14);
+            this.logoutpage.Flags = 65534;
+            this.logoutpage.ImageSmall = global::TicTacToe.Properties.Resources.icons8_log_out_24;
+            this.logoutpage.LastVisibleSet = true;
+            this.logoutpage.MinimumSize = new System.Drawing.Size(50, 50);
+            this.logoutpage.Name = "logoutpage";
+            this.logoutpage.Size = new System.Drawing.Size(1115, 716);
+            this.logoutpage.StateCommon.Page.Image = global::TicTacToe.Properties.Resources._2;
+            this.logoutpage.StateCommon.Page.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.logoutpage.Text = "";
+            this.logoutpage.TextTitle = "";
+            this.logoutpage.ToolTipTitle = "Page ToolTip";
+            this.logoutpage.UniqueName = "9F8BD8D6146B4969AD9B17BFE06D2110";
             // 
             // kryptonButton1
             // 
@@ -1109,9 +1109,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eLODataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).EndInit();
-            this.kryptonPage3.ResumeLayout(false);
-            this.kryptonPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoutpage)).EndInit();
+            this.logoutpage.ResumeLayout(false);
+            this.logoutpage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1186,7 +1186,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox personalphoto;
-        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage3;
+        private ComponentFactory.Krypton.Navigator.KryptonPage logoutpage;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private System.Windows.Forms.Label label14;
     }
