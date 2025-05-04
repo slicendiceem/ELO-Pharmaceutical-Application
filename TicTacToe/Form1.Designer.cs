@@ -172,7 +172,7 @@
             this.logoutpage});
             this.kryptonNavigator1.Palette = this.kryptonPalette1;
             this.kryptonNavigator1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonNavigator1.SelectedIndex = 4;
+            this.kryptonNavigator1.SelectedIndex = 2;
             this.kryptonNavigator1.Size = new System.Drawing.Size(1155, 718);
             this.kryptonNavigator1.StateCommon.Panel.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.kryptonNavigator1.StateCommon.Panel.Color2 = System.Drawing.Color.GreenYellow;
