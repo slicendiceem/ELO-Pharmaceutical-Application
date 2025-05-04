@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TicTacToe
 {
@@ -18,15 +19,16 @@ namespace TicTacToe
             InitializeComponent();
         }
 
+        public string loggedaccount
+        {
+            get { return loggedaccountnum; }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            loggedaccountnum = "";
             userinput.Focus();
             userinput.Focus();
-        }
-        
-        public void loadaccountnum()
-        {
-            
         }
 
 
@@ -148,7 +150,9 @@ namespace TicTacToe
                     if (user2.Password.Equals(passinput.Text))
                     {
                         loggedaccountnum = user2.Email;
+
                         Form1 Form1 = new Form1();
+                        Form1.loggedaccount = loggedaccountnum;
                         Form1.Show();
                         this.Hide();
                     }

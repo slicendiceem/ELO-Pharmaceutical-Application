@@ -19,10 +19,18 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
+
+        public static string loggedaccountnum = "";
+
         MemoryStream ms;
         private void kryptonPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public string loggedaccount
+        {
+            set { loggedaccountnum = value; }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -352,6 +360,19 @@ namespace TicTacToe
         private void kryptonLabel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            loggedaccountnum = "";
+            LogIn frm = new LogIn();
+            frm.Show();
+            this.Hide();
         }
     }
     }

@@ -194,6 +194,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-tick-tick-144.png" />
+    <None Include="Resources\icons8-log-out-24.png" />
+    <None Include="Resources\Logout.png" />
     <None Include="Resources\Expired.png" />
     <None Include="Resources\Customer.png" />
     <None Include="Resources\Add User Male1.png" />
