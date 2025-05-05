@@ -20,6 +20,17 @@ namespace TicTacToe
         public Form1()
         {
             InitializeComponent();
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    control.Enter += (sender, e) => ((TextBox)sender).SelectAll();
+                }
+                else if (control is KryptonTextBox) // For KryptonTextBox
+                {
+                    control.Enter += (sender, e) => ((KryptonTextBox)sender).SelectAll();
+                }
+            }
         }
 
         public static string loggedaccountnum = "";
@@ -101,33 +112,108 @@ namespace TicTacToe
             ELOEntities dbe = new ELOEntities();
             //----------------------------------
             Drug dru = new Drug();
-            dru.Name = kryptonTextBox2.Text;
-            dru.Manufacturer = AddManufacturer.Text;
-            dru.Purpose = AddPurpose.Text;
-            if (restricted_y.Checked)
-                dru.Restricted = "Yes";
+            // Validate Name
+            if (string.IsNullOrWhiteSpace(kryptonTextBox2.Text) && kryptonTextBox2.Text == "Name")
+            {
+                KryptonMessageBox.Show("Drug name cannot be empty", "Validation Error",
+                                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                kryptonTextBox2.Focus();
+            }
             else
-                dru.Restricted = "No";
-            dru.Price = int.Parse(AddPrice.Text);
-            dru.Sale_Price = int.Parse(AddSalePrice.Text);
-            dru.Stock_Amount = int.Parse(kryptonTextBox1.Text);
-            dru.Prod = prod_date.Value;
-            dru.Exp = exp_date.Value;
-            //dru.Photo = ms.ToArray();
-            int no;
-            var item = dbe.Drug.ToArray();
-            no = item.LastOrDefault().ID + 1;
-            dru.ID = no;
-            dbe.Drug.Add(dru);
-            dbe.SaveChanges();
-            MessageBox.Show("Drug has been added successfully.", "Drug Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                // Validate Manufacturer
+                if (string.IsNullOrWhiteSpace(AddManufacturer.Text) && AddManufacturer.Text == "Manufacturer")
+                {
+                    KryptonMessageBox.Show("Manufacturer cannot be empty", "Validation Error",
+                                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    AddManufacturer.Focus();
+                }
+                else
+                {
+                    // Validate Purpose
+                    if (string.IsNullOrWhiteSpace(AddPurpose.Text) && AddPurpose.Text == "Purpose")
+                    {
+                        KryptonMessageBox.Show("Purpose cannot be empty", "Validation Error",
+                                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        AddPurpose.Focus();
+                    }
+                    else
+                    {
+                        // Validate Price
+                        if (!int.TryParse(AddPrice.Text, out int price) || price <= 0)
+                        {
+                            KryptonMessageBox.Show("Enter valid positive price", "Validation Error",
+                                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            AddPrice.Focus();
+                        }
+                        else
+                        {
+                            // Validate Sale Price
+                            if (!int.TryParse(AddSalePrice.Text, out int salePrice) || salePrice <= 0)
+                            {
+                                KryptonMessageBox.Show("Enter valid positive sale price", "Validation Error",
+                                                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                AddSalePrice.Focus();
+                            }
+                            else
+                            {
+                                // Validate Stock
+                                if (!int.TryParse(kryptonTextBox1.Text, out int stock) || stock < 0)
+                                {
+                                    KryptonMessageBox.Show("Enter valid stock amount", "Validation Error",
+                                                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    kryptonTextBox1.Focus();
+                                }
+                                else
+                                {
+                                    // Validate Dates
+                                    if (prod_date.Value >= exp_date.Value)
+                                    {
+                                        KryptonMessageBox.Show("Expiry date must be after production", "Validation Error",
+                                                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        exp_date.Focus();
+                                    }
+                                    else
+                                    {
+                                        // ALL VALIDATIONS PASSED - Create drug object
+                                        Drug drug = new Drug();
+                                        dru.Name = kryptonTextBox2.Text.Trim();
+                                        dru.Manufacturer = AddManufacturer.Text.Trim();
+                                        dru.Purpose = AddPurpose.Text.Trim();
+                                        dru.Restricted = restricted_y.Checked ? "Yes" : "No";
+                                        dru.Price = price;
+                                        dru.Sale_Price = salePrice;
+                                        dru.Stock_Amount = stock;
+                                        dru.Prod = prod_date.Value;
+                                        dru.Exp = exp_date.Value;
+                                        int no;
+                                        var item = dbe.Drug.ToArray();
+                                        no = item.LastOrDefault().ID + 1;
+                                        dru.ID = no;
+                                        dbe.Drug.Add(dru);
+                                        dbe.SaveChanges();
 
-            AddNameMedicine.Text = AddNameMedicine.Tag.ToString();
-            AddManufacturer.Text = AddManufacturer.Tag.ToString();
-            AddPurpose.Text = AddPurpose.Tag.ToString();
-            AddPrice.Text = AddPrice.Tag.ToString();
-            AddSalePrice.Text = AddSalePrice.Tag.ToString();
-            kryptonTextBox1.Text = kryptonTextBox1.Tag.ToString();
+                                        // Proceed with saving the drug
+                                        KryptonMessageBox.Show("Drug validated successfully!", "Success",
+                                                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        AddNameMedicine.Text = AddNameMedicine.Tag.ToString();
+                                        AddManufacturer.Text = AddManufacturer.Tag.ToString();
+                                        AddPurpose.Text = AddPurpose.Tag.ToString();
+                                        AddPrice.Text = AddPrice.Tag.ToString();
+                                        AddSalePrice.Text = AddSalePrice.Tag.ToString();
+                                        kryptonTextBox1.Text = kryptonTextBox1.Tag.ToString();
+                                        pictureBox1.Image = Properties.Resources.Caduceus;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            
+            
         }
 
         private ELOEntities db = new ELOEntities();
@@ -215,6 +301,10 @@ namespace TicTacToe
             numreg.Text = ds.Drug.Count.ToString();
             label5.Text = ds.Exp_Drug.Count.ToString();
             kryptonLabel6.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+            exp_DrugTableAdapter.Fill(eLODataSetExp.Exp_Drug);
+            drugTableAdapter.Fill(eLODataSet.Drug);
+            numreg.Text = kryptonDataGridView1.Rows.Count.ToString();
+            label5.Text = kryptonDataGridView2.Rows.Count.ToString();
         }
 
         private void timer2_Tick(object sender, EventArgs e)

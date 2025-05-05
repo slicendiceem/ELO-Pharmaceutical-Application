@@ -176,7 +176,7 @@
             this.logoutpage});
             this.kryptonNavigator1.Palette = this.kryptonPalette1;
             this.kryptonNavigator1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.SelectedIndex = 1;
             this.kryptonNavigator1.Size = new System.Drawing.Size(1155, 718);
             this.kryptonNavigator1.StateCommon.Panel.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.kryptonNavigator1.StateCommon.Panel.Color2 = System.Drawing.Color.GreenYellow;
@@ -1063,12 +1063,12 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 20000;
+            this.timer1.Interval = 90000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
             // 
-            this.timer2.Interval = 15000;
+            this.timer2.Interval = 10000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // exp_DrugTableAdapter
