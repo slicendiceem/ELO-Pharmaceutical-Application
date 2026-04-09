@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Data;
-using System.Data.Odbc;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TicTacToe
 {
-    
+
     public partial class LogIn : KryptonForm
     {
         public static string loggedaccountnum = "";
@@ -68,10 +64,10 @@ namespace TicTacToe
         {
             Application.Exit();
         }
-        
+
         private void newuser_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         public void log_in_Click_1(object sender, EventArgs e)
@@ -82,7 +78,7 @@ namespace TicTacToe
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void kryptonPalette1_PalettePaint(object sender, PaletteLayoutEventArgs e)
@@ -139,23 +135,18 @@ namespace TicTacToe
 
         private void log_in_Click_2(object sender, EventArgs e)
         {
-            string username, password;
-            username = userinput.Text;
-            password = passinput.Text;
-            //-------Database Declaration-------
-            ELOEntities dbe = new ELOEntities();
-            //----------------------------------
-            if (userinput.Text != string.Empty || passinput.Text != string.Empty)
+            if (!string.IsNullOrWhiteSpace(userinput.Text) && !string.IsNullOrWhiteSpace(passinput.Text))
             {
 
-                var user2 = dbe.users.FirstOrDefault(a => a.Email.Equals(userinput.Text));
+                var user2 = DatabaseHelper.GetUserByEmail(userinput.Text);
                 if (user2 != null)
                 {
-                    if (user2.Password.Equals(passinput.Text))
+                    if (PasswordHelper.VerifyPassword(passinput.Text, user2.Password))
                     {
                         loggedaccountnum = user2.Email;
 
                         Form1 Form1 = new Form1();
+                        Form1.loggedroleProperty = user2.Role ?? "cashier";
                         Form1.loggedaccount = loggedaccountnum;
                         Form1.Show();
                         this.Hide();

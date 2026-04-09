@@ -12,18 +12,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using ComponentFactory.Krypton.Toolkit;
-using System.Data.SQLite;
 namespace TicTacToe
 {
     public partial class NewUser : KryptonForm
     {
-        private SQLiteConnection GetConnection()
-        {
-            //=========================New Database Path=========================
-            string dbPath = Path.Combine(Application.StartupPath, "ELODB.sqlite");
-            return new SQLiteConnection($"Data Source={dbPath};Version=3;");
-        }
-
         public NewUser()
         {
             InitializeComponent();
@@ -44,24 +36,10 @@ namespace TicTacToe
         private void NewUser_Load(object sender, EventArgs e)
         {
             load_Date();
-            load_Account();
         }
         MemoryStream ms;
         private void createbtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private int load_Account()
-        {
-            int no;
-            //-------Database Declaration-------
-            ELOEntities bse = new ELOEntities();
-            //----------------------------------
-            var item = bse.users.ToArray();
-            no = item.LastOrDefault().ID + 1;
-            return no;
-
 
         }
 
@@ -175,9 +153,10 @@ namespace TicTacToe
             string firstname = string.Empty;
             string middlename = string.Empty;
             string lastname = string.Empty;
+            long mobileNumber = 0;
             var confirmCreation = MessageBox.Show("Submit details and create account?", "Confirm Creation", MessageBoxButtons.YesNo);
-            if(confirmCreation == DialogResult.Yes)
-{
+            if (confirmCreation == DialogResult.Yes)
+            {
                 if (confirmpassword.Text == createpassword.Text)
                 {
                     if (!string.IsNullOrWhiteSpace(createfirstname.Text) &&
@@ -187,49 +166,42 @@ namespace TicTacToe
                             emailinput.Text.Contains("@") &&
                             emailinput.Text.Contains("."))
                         {
-                            if (int.TryParse(numberinput.Text, out int mobileNumber) &&
-                                numberinput.Text.Length >= 11) // Basic mobile number validation
+                            if (long.TryParse(numberinput.Text, out mobileNumber) &&
+                                numberinput.Text.Length == 11) // Basic mobile number validation
                             {
                                 if (personalphoto.Image != null)
                                 {
                                     try
                                     {
-                                        //-------Database Declaration-------
-                                        using (ELOEntities bse = new ELOEntities())
+                                        user acc = new user();
+                                        acc.First_Name = createfirstname.Text.Trim();
+                                        acc.Second_Name = createlastname.Text.Trim();
+                                        acc.Email = emailinput.Text.Trim();
+                                        acc.Mobile = mobileNumber;
+                                        acc.Password = PasswordHelper.HashPassword(createpassword.Text);
+                                        acc.Role = "cashier";
+
+                                        using (MemoryStream ms = new MemoryStream())
                                         {
-                                            //----------------------------------
-                                            user acc = new user();
-                                            acc.ID = load_Account();
-                                            acc.First_Name = createfirstname.Text.Trim();
-                                            acc.Second_Name = createlastname.Text.Trim();
-                                            acc.Email = emailinput.Text.Trim();
-                                            acc.Mobile = mobileNumber;
-                                            acc.Password = createpassword.Text; // Consider hashing this
-
-                                            // Convert image to byte array
-                                            using (MemoryStream ms = new MemoryStream())
-                                            {
-                                                personalphoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                                                acc.Photo = ms.ToArray();
-                                            }
-
-                                            bse.users.Add(acc);
-                                            bse.SaveChanges();
-
-                                            // Reset form
-                                            personalphoto.Image = null;
-
-                                            MessageBox.Show("Account created successfully!", "Success",
-                                                          MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                            LogIn login = new LogIn();
-                                            login.Show();
-                                            this.Close();
+                                            personalphoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                                            acc.Photo = ms.ToArray();
                                         }
+
+                                        DatabaseHelper.AddUser(acc);
+
+                                        // Reset form
+                                        personalphoto.Image = null;
+
+                                        MessageBox.Show("Account created successfully!", "Success",
+                                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                        LogIn login = new LogIn();
+                                        login.Show();
+                                        this.Close();
                                     }
                                     catch (Exception ex)
                                     {
-                                        MessageBox.Show($"Error creating account: {ex.Message}", "Error",
+                                        MessageBox.Show("Error creating account: " + ex.Message, "Error",
                                                       MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     }
                                 }

@@ -21,5 +21,6 @@ namespace TicTacToe
         public Nullable<long> Mobile { get; set; }
         public byte[] Photo { get; set; }
         public string Password { get; set; }
+        public string Role { get; set; }
     }
 }
