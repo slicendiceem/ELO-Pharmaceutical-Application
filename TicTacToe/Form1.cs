@@ -58,6 +58,9 @@ namespace TicTacToe
             // Resize admin tab icon to match the 24x24 used by other tabs
             adminPage.ImageSmall = new System.Drawing.Bitmap(Properties.Resources.Add_User_Male, new System.Drawing.Size(24, 24));
 
+            // Ensure process exits cleanly when Form1 closes (X button or logout)
+            this.FormClosing += (s, fe) => { if (fe.CloseReason != CloseReason.ApplicationExitCall) Application.Exit(); };
+
             // Load user data for profile display
             LoadUserData();
 
@@ -430,11 +433,11 @@ namespace TicTacToe
         private void InitCartTable()
         {
             _cartTable = new System.Data.DataTable();
-            _cartTable.Columns.Add("_ID",       typeof(int));
-            _cartTable.Columns.Add("Name",      typeof(string));
-            _cartTable.Columns.Add("Qty",       typeof(int));
+            _cartTable.Columns.Add("_ID", typeof(int));
+            _cartTable.Columns.Add("Name", typeof(string));
+            _cartTable.Columns.Add("Qty", typeof(int));
             _cartTable.Columns.Add("UnitPrice", typeof(decimal));
-            _cartTable.Columns.Add("Subtotal",  typeof(decimal));
+            _cartTable.Columns.Add("Subtotal", typeof(decimal));
             dgvCart.DataSource = _cartTable;
         }
 
@@ -472,9 +475,9 @@ namespace TicTacToe
         {
             if (dgvCashierMeds.SelectedRows.Count == 0) return;
             System.Windows.Forms.DataGridViewRow row = dgvCashierMeds.SelectedRows[0];
-            int drugId   = System.Convert.ToInt32(row.Cells["colCashierID"].Value);
-            string name  = row.Cells["colCashierName"].Value == null ? "" : row.Cells["colCashierName"].Value.ToString();
-            int inStock  = row.Cells["colCashierStock"].Value == null ? 0 : System.Convert.ToInt32(row.Cells["colCashierStock"].Value);
+            int drugId = System.Convert.ToInt32(row.Cells["colCashierID"].Value);
+            string name = row.Cells["colCashierName"].Value == null ? "" : row.Cells["colCashierName"].Value.ToString();
+            int inStock = row.Cells["colCashierStock"].Value == null ? 0 : System.Convert.ToInt32(row.Cells["colCashierStock"].Value);
             decimal unitPrice = row.Cells["colCashierPrice"].Value == null || row.Cells["colCashierPrice"].Value == System.DBNull.Value
                 ? 0m : System.Convert.ToDecimal(row.Cells["colCashierPrice"].Value);
             int qty = (int)nudCashierQty.Value;
@@ -496,7 +499,7 @@ namespace TicTacToe
             if (cartIdx >= 0)
             {
                 int newQty = existingQty + qty;
-                _cartTable.Rows[cartIdx]["Qty"]      = newQty;
+                _cartTable.Rows[cartIdx]["Qty"] = newQty;
                 _cartTable.Rows[cartIdx]["Subtotal"] = unitPrice * newQty;
             }
             else
@@ -715,6 +718,7 @@ namespace TicTacToe
             display.Columns.Add("Stock_Amount", typeof(object));
             display.Columns.Add("Prod", typeof(string));
             display.Columns.Add("Exp", typeof(string));
+            display.Columns.Add("TimeLeft", typeof(string));
 
             var groups = new System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<System.Data.DataRow>>(System.StringComparer.OrdinalIgnoreCase);
             var order = new System.Collections.Generic.List<string>();
@@ -735,10 +739,28 @@ namespace TicTacToe
                     foreach (System.Data.DataRow r in batches)
                         if (r["Stock_Amount"] != System.DBNull.Value)
                             totalStock += System.Convert.ToInt32(r["Stock_Amount"]);
+                    // Find nearest expiry across all batches for the header label
+                    string nearestExpStr = "";
+                    DateTime nearestExpDate = DateTime.MaxValue;
+                    foreach (System.Data.DataRow rb in batches)
+                    {
+                        if (rb["Exp"] != System.DBNull.Value)
+                        {
+                            string es = rb["Exp"].ToString();
+                            if (es.Length > 10) es = es.Substring(0, 10);
+                            DateTime ed;
+                            if (DateTime.TryParse(es, out ed) && ed < nearestExpDate)
+                            {
+                                nearestExpDate = ed;
+                                nearestExpStr = es;
+                            }
+                        }
+                    }
                     display.Rows.Add("header", name, expanded ? "\u25BC" : "\u25BA", name,
                         batches[0]["Manufacturer"], batches[0]["Purpose"], batches[0]["Restricted"],
                         batches[0]["Price"], batches[0]["Sale_Price"],
-                        totalStock, "(" + batches.Count.ToString() + " batches)", "");
+                        totalStock, "(" + batches.Count.ToString() + " batches)", "",
+                        DatabaseHelper.FormatTimeLeft(nearestExpStr));
                     if (expanded)
                     {
                         foreach (System.Data.DataRow r in batches)
@@ -750,7 +772,8 @@ namespace TicTacToe
                             int s = r["Stock_Amount"] == System.DBNull.Value ? 0 : System.Convert.ToInt32(r["Stock_Amount"]);
                             display.Rows.Add("detail", name, "", "    \u21B3  " + name,
                                 r["Manufacturer"], r["Purpose"], r["Restricted"],
-                                r["Price"], r["Sale_Price"], s, prod, exp);
+                                r["Price"], r["Sale_Price"], s, prod, exp,
+                                DatabaseHelper.FormatTimeLeft(exp));
                         }
                     }
                 }
@@ -763,7 +786,8 @@ namespace TicTacToe
                     if (exp.Length > 10) exp = exp.Substring(0, 10);
                     display.Rows.Add("single", name, "", r["Name"],
                         r["Manufacturer"], r["Purpose"], r["Restricted"],
-                        r["Price"], r["Sale_Price"], r["Stock_Amount"], prod, exp);
+                        r["Price"], r["Sale_Price"], r["Stock_Amount"], prod, exp,
+                        DatabaseHelper.FormatTimeLeft(exp));
                 }
             }
             return display;
@@ -1147,10 +1171,15 @@ namespace TicTacToe
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            var result = KryptonMessageBox.Show(
+                "Are you sure you want to log out?",
+                "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result != DialogResult.Yes) return;
+
             loggedaccountnum = "";
             LogIn frm = new LogIn();
             frm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void LoadUserData()
@@ -1161,7 +1190,7 @@ namespace TicTacToe
                 if (userData != null)
                 {
                     loggeduserid = userData.ID;
-                    loggedrole   = userData.Role ?? "cashier";
+                    loggedrole = userData.Role ?? "cashier";
                     string roleDisplay = !string.IsNullOrWhiteSpace(userData.Role)
                         ? "  [" + char.ToUpper(userData.Role[0]) + userData.Role.Substring(1) + "]"
                         : "";
@@ -1194,7 +1223,7 @@ namespace TicTacToe
 
         private void ApplyRolePermissions()
         {
-            bool isAdmin      = string.Equals(loggedrole, "admin",      StringComparison.OrdinalIgnoreCase);
+            bool isAdmin = string.Equals(loggedrole, "admin", StringComparison.OrdinalIgnoreCase);
             bool isPharmacist = string.Equals(loggedrole, "pharmacist", StringComparison.OrdinalIgnoreCase);
 
             // Directly control the Pages collection — the only reliable way

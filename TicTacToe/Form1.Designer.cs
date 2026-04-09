@@ -52,6 +52,7 @@
             this.exp_date = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.prod_date = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.expandIconColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeLeftColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,6 +64,7 @@
             this.stockAmountDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prodDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTimeStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expDrugBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eLODataSetExp = new TicTacToe.ELODataSet();
             this.numreg = new System.Windows.Forms.Label();
@@ -1187,7 +1189,8 @@
             this.purposeDataGridViewTextBoxColumn1,
             this.stockAmountDataGridViewTextBoxColumn1,
             this.prodDataGridViewTextBoxColumn1,
-            this.expDataGridViewTextBoxColumn1});
+            this.expDataGridViewTextBoxColumn1,
+            this.colTimeStatus});
             this.kryptonDataGridView2.DataSource = this.expDrugBindingSource;
             this.kryptonDataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonDataGridView2.Location = new System.Drawing.Point(365, 123);
@@ -1259,6 +1262,15 @@
             this.expDataGridViewTextBoxColumn1.HeaderText = "Expiry Date";
             this.expDataGridViewTextBoxColumn1.Name = "expDataGridViewTextBoxColumn1";
             this.expDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // colTimeStatus
+            // 
+            this.colTimeStatus.DataPropertyName = "TimeStatus";
+            this.colTimeStatus.HeaderText = "Time Status";
+            this.colTimeStatus.Name = "colTimeStatus";
+            this.colTimeStatus.ReadOnly = true;
+            this.colTimeStatus.Width = 110;
+            this.colTimeStatus.MinimumWidth = 80;
             // 
             // expDrugBindingSource
             // 
@@ -1604,14 +1616,15 @@
             this.salePriceDataGridViewTextBoxColumn,
             this.stockAmountDataGridViewTextBoxColumn,
             this.prodDataGridViewTextBoxColumn,
-            this.expDataGridViewTextBoxColumn});
+            this.expDataGridViewTextBoxColumn,
+            this.timeLeftColumn});
             this.kryptonDataGridView1.DataSource = this.drugBindingSource;
             this.kryptonDataGridView1.Location = new System.Drawing.Point(0, 115);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RowHeadersWidth = 51;
             this.kryptonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1112, 601);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1075, 601);
             this.kryptonDataGridView1.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kryptonDataGridView1.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kryptonDataGridView1.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
@@ -1713,6 +1726,15 @@
             this.expDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.expDataGridViewTextBoxColumn.Name = "expDataGridViewTextBoxColumn";
             this.expDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // timeLeftColumn
+            // 
+            this.timeLeftColumn.DataPropertyName = "TimeLeft";
+            this.timeLeftColumn.HeaderText = "Time Left";
+            this.timeLeftColumn.Name = "timeLeftColumn";
+            this.timeLeftColumn.ReadOnly = true;
+            this.timeLeftColumn.Width = 110;
+            this.timeLeftColumn.MinimumWidth = 80;
             // 
             // drugBindingSource
             // 
@@ -2009,12 +2031,13 @@
             this.colCartQty,
             this.colCartUnitPrice,
             this.colCartTotal});
+            this.dgvCart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCart.Location = new System.Drawing.Point(554, 96);
             this.dgvCart.Name = "dgvCart";
             this.dgvCart.ReadOnly = true;
             this.dgvCart.RowHeadersWidth = 51;
             this.dgvCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCart.Size = new System.Drawing.Size(548, 430);
+            this.dgvCart.Size = new System.Drawing.Size(523, 430);
             this.dgvCart.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.dgvCart.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.dgvCart.StateCommon.HeaderColumn.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
@@ -2450,6 +2473,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stockAmountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeLeftColumn;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnRemoveSelected;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearchMedicine;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnExportMedicine;
@@ -2518,6 +2542,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stockAmountDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn expDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTimeStatus;
         // ── Admin tab
         private ComponentFactory.Krypton.Navigator.KryptonPage adminPage;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblAdminTitle;

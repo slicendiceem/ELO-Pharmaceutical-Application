@@ -231,6 +231,13 @@ namespace TicTacToe
                     adapter.SelectCommand.Parameters.AddWithValue("@t", "%" + term + "%");
                 var dt = new DataTable();
                 adapter.Fill(dt);
+                // Add computed TimeStatus column (time left or elapsed since expiry)
+                dt.Columns.Add("TimeStatus", typeof(string));
+                foreach (DataRow row in dt.Rows)
+                {
+                    string expStr = row["Exp"] == DBNull.Value ? "" : row["Exp"].ToString();
+                    row["TimeStatus"] = FormatTimeLeft(expStr);
+                }
                 return dt;
             }
         }
@@ -469,6 +476,37 @@ namespace TicTacToe
                 cmd.Parameters.AddWithValue("@role", role);
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
+            }
+        }
+
+        /// <summary>
+        /// Returns a human-readable label for time remaining until, or elapsed since, expDateStr.
+        /// Examples: "3mo 15d left", "45d left", "2mo ago", "Today"
+        /// </summary>
+        public static string FormatTimeLeft(string expDateStr)
+        {
+            if (string.IsNullOrWhiteSpace(expDateStr)) return "";
+            if (expDateStr.Length > 10) expDateStr = expDateStr.Substring(0, 10);
+            DateTime expDate;
+            if (!DateTime.TryParse(expDateStr, out expDate)) return "";
+            int totalDays = (int)(expDate.Date - DateTime.Today).TotalDays;
+            if (totalDays == 0) return "Today";
+            if (totalDays > 0)
+            {
+                int mo = totalDays / 30;
+                int dy = totalDays % 30;
+                if (mo == 0) return string.Format("{0}d left", dy);
+                if (dy == 0) return string.Format("{0}mo left", mo);
+                return string.Format("{0}mo {1}d left", mo, dy);
+            }
+            else
+            {
+                int pastDays = -totalDays;
+                int mo = pastDays / 30;
+                int dy = pastDays % 30;
+                if (mo == 0) return string.Format("{0}d ago", dy);
+                if (dy == 0) return string.Format("{0}mo ago", mo);
+                return string.Format("{0}mo {1}d ago", mo, dy);
             }
         }
     }
